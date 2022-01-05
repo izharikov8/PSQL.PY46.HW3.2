@@ -15,7 +15,6 @@ create table if not exists albums (
 id serial primary key,
 album_name varchar(40) not null unique,
 album_year integer not null,
-singer_id integer references singer(id));
 
 create table if not exists SingerAlbums (
 album_id integer references albums(id),
